@@ -1,6 +1,6 @@
 # Java-SQL-Mgmt-System
 
-Important: the database details are set in src/app/MySQLDataAdapter.java :
+The database details are set in src/app/MySQLDataAdapter.java :
 
 private final String dbPass = "admin";
 This has to be changed if the password is different for the system to
