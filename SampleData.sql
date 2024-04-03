@@ -1,0 +1,66 @@
+INSERT INTO Customers (Name, Email, Phone, Address) VALUES 
+('Ella F.', 'ella@example.com', '555-0100', '101 Jazz Ln'),
+('Miles D.', 'miles@example.com', '555-0101', '102 Trumpet Rd'),
+('Billie H.', 'billie@example.com', '555-0102', '103 Blues Blvd'),
+('John C.', 'john@example.com', '555-0103', '104 Sax St'),
+('Charlie P.', 'charlie@example.com', '555-0104', '105 Bebop Wy'),
+('Thelonious M.', 'thelonious@example.com', '555-0105', '106 Rhythm Rd'),
+('Dizzy G.', 'dizzy@example.com', '555-0106', '107 Swing St'),
+('Sarah V.', 'sarah@example.com', '555-0107', '108 Vocal Ln'),
+('Duke E.', 'duke@example.com', '555-0108', '109 Comp Ct'),
+('Louis A.', 'louis@example.com', '555-0109', '110 Jazz Jct');
+INSERT INTO Suppliers (Name, ContactName, Email, Phone, Address) VALUES 
+('Tech Inc', 'Sam T.', 'sam@techinc.com', '800-111-2222', '123 Silicon Vly'),
+('Gourmet Del', 'Olivia G.', 'olivia@gourmet.com', '800-222-3333', '456 Flavor St'),
+('Home Decor', 'Ethan D.', 'ethan@homedecor.com', '800-333-4444', '789 Design Ave'),
+('Gear Ltd', 'Ava G.', 'ava@gearltd.com', '800-444-5555', '123 Adventure Ln'),
+('Wellness Org', 'Noah W.', 'noah@wellness.com', '800-555-6666', '456 Health Rd'),
+('Toys Co', 'Sophia C.', 'sophia@toys.com', '800-666-7777', '789 Imagination Blvd'),
+('Electronics', 'Liam E.', 'liam@electronics.com', '800-777-8888', '123 Tech Park'),
+('Fashion Fwd', 'Emma F.', 'emma@fashion.com', '800-888-9999', '456 Style St'),
+('Book Haven', 'Lucas B.', 'lucas@bookhaven.com', '800-999-0000', '789 Reading Rd'),
+('Gardening Sup', 'Mia G.', 'mia@gardening.com', '800-000-1111', '123 Plant St');
+INSERT INTO Products (SupplierID, Name, Description, Quantity, Price, SupplyPrice, Expiration) VALUES 
+(1, 'Smart X', 'Latest smartphone', 50, 999.99, 500.00, 'n/a'),
+(2, 'Org Honey', 'Pure organic honey', 100, 15.99, 8.00, '2025-12-31'),
+(3, 'Mod Lamp', 'Elegant indoor lamp', 75, 45.50, 22.75, 'n/a'),
+(4, 'Hike Pack', 'Durable backpack', 60, 79.99, 40.00, 'n/a'),
+(5, 'Yoga Mat', 'Eco-friendly mat', 85, 50.00, 25.00, 'n/a'),
+(6, 'Ed Blocks', 'Learning toy for kids', 120, 30.00, 15.00, 'n/a'),
+(7, 'Wrls Headph', 'Noise-cancelling', 90, 150.00, 75.00, 'n/a'),
+(8, 'Sum Dress', 'Light summer dress', 100, 65.00, 32.50, 'n/a'),
+(9, 'Best Novels', 'Collection of novels', 150, 80.00, 40.00, 'n/a'),
+(10, 'Gard Toolset', 'Various gardening tools', 80, 70.00, 35.00, 'n/a');
+INSERT INTO Orders (CustomerID, OrderDate, TotalPrice, Status, PaymentStatus) VALUES 
+(1, '2024-03-15', 1999.98, 'Completed', 'Paid'),
+(2, '2024-03-22', 31.98, 'Completed', 'Paid'),
+(3, '2024-04-05', 45.50, 'Pending', 'Paid'),
+(4, '2024-04-12', 159.98, 'Pending', 'Paid'),
+(5, '2024-05-20', 100.00, 'Completed', 'Paid'),
+(6, '2024-05-25', 60.00, 'Completed', 'Paid'),
+(7, '2024-06-10', 300.00, 'Pending', 'Paid'),
+(8, '2024-06-15', 130.00, 'Completed', 'Paid'),
+(9, '2024-07-05', 220.00, 'Pending', 'Paid'),
+(10, '2024-07-12', 140.00, 'Completed', 'Paid');
+INSERT INTO OrderLines (OrderID, ProductID, Quantity, PriceAtPurchase) VALUES 
+(1, 1, 2, 999.99),
+(2, 2, 2, 15.99),
+(3, 3, 1, 45.50),
+(4, 4, 2, 79.99),
+(5, 5, 2, 50.00),
+(6, 6, 2, 30.00),
+(7, 7, 2, 150.00),
+(8, 8, 2, 65.00),
+(9, 9, 2, 80.00),
+(10, 10, 2, 70.00);
+INSERT INTO Payments (OrderID, Amount, PaymentDate, Method) VALUES 
+(1, 1999.98, '2024-03-16', 'Credit Card'),
+(2, 31.98, '2024-03-23', 'Debit Card'),
+(3, 45.50, '2024-04-06', 'Cash'),
+(4, 159.98, '2024-04-13', 'Credit Card'),
+(5, 100.00, '2024-05-21', 'Debit Card'),
+(6, 60.00, '2024-05-26', 'Cash'),
+(7, 300.00, '2024-06-11', 'Credit Card'),
+(8, 130.00, '2024-06-16', 'Debit Card'),
+(9, 220.00, '2024-07-06', 'Cash'),
+(10, 140.00, '2024-07-13', 'Credit Card');
