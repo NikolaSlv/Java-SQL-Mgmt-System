@@ -25,5 +25,4 @@ java -cp ".;../../../mysql-connector-j-8.3.0.jar" app.Application
 
 Otherwise, IntelliJ or another IDE can also be used.
 
-The main function of this system is in src/app/Application.java
 The project is organized using Model-View-Controller architecture design pattern.
